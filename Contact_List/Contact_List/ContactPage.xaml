@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Contact_List.ContactPage" Title="Информация о контакте">
+    <StackLayout>
+        <Label Text="Имя" />
+        <Entry Text="{Binding Name}" />
+        <Label Text="Телефон" />
+        <Entry Text="{Binding Phone}" x:Name="PhoneNumber" />
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Сохранить" Clicked="SaveContact" />
+            <Button Text="Удалить" Clicked="DeleteContact" />
+            <Button Text="Отмена" Clicked="Cancel" />
+            <Button Text="Вызов" Clicked="Call" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
